@@ -1,0 +1,25 @@
+{
+  "model_name": "shallow_mlp_tuned",
+  "algorithm": "shallow_mlp",
+  "hyperparameters": {
+    "rate": 0.019970564256550263,
+    "hidden": 41,
+    "epochs": 7
+  },
+  "seed": 72,
+  "feature_cols": [
+    "distance_m",
+    "projection_fraction",
+    "direction_cosine",
+    "speed_m_s",
+    "time_gap_s",
+    "segment_length_m",
+    "distance_rank",
+    "connects_previous_best"
+  ],
+  "selection_metric": "mean grouped CV candidate Macro F1 at threshold 0.5",
+  "probability_threshold": 0.5,
+  "scores_are_calibrated": false,
+  "train_scores": "out-of-fold",
+  "parquet": false
+}
