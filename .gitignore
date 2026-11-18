@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+data/
+*.track
+*.nodes
+*.arcs
+*.route
+*.pem
+*.key
+PathSnap_Technical_Report.pdf

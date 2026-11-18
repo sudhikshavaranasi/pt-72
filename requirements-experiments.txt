@@ -1,0 +1,5 @@
+numpy>=1.26
+pandas>=2
+networkx>=3.3
+pillow>=10.1
+reportlab>=4

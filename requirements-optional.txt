@@ -1,0 +1,4 @@
+folium>=0.17
+pyarrow>=18
+optuna>=4
+PyYAML>=6
