@@ -1,0 +1,17 @@
+{
+  "beta_m": 8.0,
+  "beta_m_per_s": 2.0,
+  "emission_weight": 1.0,
+  "gap_threshold_s": 30,
+  "road_slack_m": 50.0,
+  "road_slack_m_s": 32.0,
+  "max_road_m": 1200.0,
+  "speed_spike_m_s": 55.0,
+  "spike_beta_multiplier": 2.5,
+  "stationary_m": 3.0,
+  "stationary_max_dt_s": 3.0,
+  "stationary_switch_cost": 1.2,
+  "backtrack_tolerance_m": 10.0,
+  "model_name": "shallow_mlp_tuned",
+  "selection_metric": "macro per-trip Top-1 on 16 training trips using OOF scores"
+}
