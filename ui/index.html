@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PathSnap | Route evaluation</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brandmark" aria-hidden="true"><i></i><i></i><i></i></span>PathSnap</div>
+    <div id="connection" class="connection" role="status"><i></i>Checking API</div>
+  </header>
+  <main>
+    <div class="heading">
+      <div><h1>Route evaluation</h1><p>Compare GPS observations with the reconstructed road route.</p></div>
+      <form id="trip-form">
+        <div><label for="trip">Trip</label><select id="trip" name="trip" disabled><option>Loading trips…</option></select></div>
+        <button id="run" disabled>Reconstruct route <span aria-hidden="true">→</span></button>
+      </form>
+    </div>
+    <div class="workspace">
+      <section class="card map-card" aria-labelledby="map-title">
+        <header class="card-head"><div><h2 id="map-title">Trip map</h2><p id="map-subtitle">Select a trip to display results.</p></div>
+          <div class="map-settings"><label for="route-view">Route result</label>
+            <select id="route-view" disabled>
+              <option value="viterbi">Viterbi</option>
+              <option value="classifier" disabled>Classifier only</option>
+              <option value="both" disabled>Compare both</option>
+            </select>
+          </div>
+          <div class="layers"><label><input id="gps-layer" type="checkbox" checked> GPS</label><label><input id="route-layer" type="checkbox" checked> Predicted route</label></div>
+        </header>
+        <div id="viewport">
+          <div id="street-map" aria-label="OpenStreetMap with GPS and predicted route"></div>
+          <div id="placeholder">Run a trip to view its route.</div>
+          <div class="map-actions" aria-label="Map zoom">
+            <button type="button" id="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
+            <button type="button" id="zoom-out" title="Zoom out" aria-label="Zoom out">−</button>
+            <button type="button" id="reset" title="Fit route" aria-label="Fit route">↺</button>
+          </div>
+        </div>
+        <div id="map-footer"><span><i class="dot"></i> GPS observations</span><span id="viterbi-key" hidden><i class="line"></i> Viterbi</span><span id="classifier-key" hidden><i class="line classifier"></i> Classifier only</span><span id="map-status" role="status"></span><span id="bounds"></span></div>
+      </section>
+      <aside class="card metrics" aria-labelledby="metric-title">
+        <header><h2 id="metric-title">Evaluation metrics</h2><p id="metric-status" role="status">Awaiting prediction</p></header>
+        <dl>
+          <div class="primary"><dt>Viterbi Top-1</dt><dd id="top1_acc_hmm">—</dd></div>
+          <div><dt>Classifier Top-1</dt><dd id="top1_acc_clf">—</dd></div>
+          <div><dt>Viterbi route continuity</dt><dd id="route_continuity">—</dd></div>
+          <div><dt>Candidate miss rate</dt><dd id="candidate_miss_rate">—</dd></div>
+          <div><dt>Inference time</dt><dd id="inference_ms">—</dd></div>
+        </dl>
+        <p id="error" role="alert" hidden></p>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
