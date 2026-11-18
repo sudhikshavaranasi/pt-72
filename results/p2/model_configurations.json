@@ -1,0 +1,29 @@
+{
+  "logistic": {
+    "l2": 0.003,
+    "steps": 100
+  },
+  "gaussian_nb": {
+    "floor": 0.03,
+    "temperature": 1.0
+  },
+  "rbf_prototypes": {
+    "bandwidth": 0.9,
+    "centers": 10
+  },
+  "boosted_stumps": {
+    "rate": 0.16,
+    "rounds": 60,
+    "bins": 20
+  },
+  "shallow_mlp": {
+    "rate": 0.006,
+    "hidden": 24,
+    "epochs": 7
+  },
+  "shallow_mlp_tuned": {
+    "rate": 0.019970564256550263,
+    "hidden": 41,
+    "epochs": 7
+  }
+}

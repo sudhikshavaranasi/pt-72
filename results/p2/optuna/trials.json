@@ -1,0 +1,122 @@
+{
+  "strategy": "Gaussian-process Bayesian search with expected improvement",
+  "objective": "mean grouped CV candidate Macro F1 at threshold 0.5",
+  "search_space": [
+    [
+      "rate",
+      0.001,
+      0.02,
+      false
+    ],
+    [
+      "hidden",
+      12,
+      44,
+      true
+    ]
+  ],
+  "trial_count": 10,
+  "best_trial": 7,
+  "trials": [
+    {
+      "trial": 0,
+      "params": {
+        "rate": 0.0169188979550022,
+        "hidden": 12
+      },
+      "cv_macro_f1": 0.8579728523164413,
+      "cv_top1": 0.6873292926902143,
+      "elapsed_s": 1.531733699999677
+    },
+    {
+      "trial": 1,
+      "params": {
+        "rate": 0.005397516855824609,
+        "hidden": 16
+      },
+      "cv_macro_f1": 0.8559937577954022,
+      "cv_top1": 0.6856628389916487,
+      "elapsed_s": 1.6625870000007126
+    },
+    {
+      "trial": 2,
+      "params": {
+        "rate": 0.014596082741560403,
+        "hidden": 22
+      },
+      "cv_macro_f1": 0.858901552871446,
+      "cv_top1": 0.6876067307731504,
+      "elapsed_s": 1.8795435000001817
+    },
+    {
+      "trial": 3,
+      "params": {
+        "rate": 0.017302189831367807,
+        "hidden": 26
+      },
+      "cv_macro_f1": 0.8588780497355146,
+      "cv_top1": 0.6877518149290961,
+      "elapsed_s": 1.9809494000000996
+    },
+    {
+      "trial": 4,
+      "params": {
+        "rate": 0.01302854271621686,
+        "hidden": 32
+      },
+      "cv_macro_f1": 0.8594968401856191,
+      "cv_top1": 0.6881933004996745,
+      "elapsed_s": 2.1606590000001233
+    },
+    {
+      "trial": 5,
+      "params": {
+        "rate": 0.010442279867966087,
+        "hidden": 41
+      },
+      "cv_macro_f1": 0.8594889016711713,
+      "cv_top1": 0.6880496406404742,
+      "elapsed_s": 2.4641491000002134
+    },
+    {
+      "trial": 6,
+      "params": {
+        "rate": 0.01583661937078029,
+        "hidden": 43
+      },
+      "cv_macro_f1": 0.8599954416416802,
+      "cv_top1": 0.6882457172464522,
+      "elapsed_s": 2.5847082000000228
+    },
+    {
+      "trial": 7,
+      "params": {
+        "rate": 0.019970564256550263,
+        "hidden": 41
+      },
+      "cv_macro_f1": 0.8600760087871739,
+      "cv_top1": 0.6882944583620606,
+      "elapsed_s": 2.4579355000005307
+    },
+    {
+      "trial": 8,
+      "params": {
+        "rate": 0.019625982672198714,
+        "hidden": 44
+      },
+      "cv_macro_f1": 0.8598036446169239,
+      "cv_top1": 0.6888413716805211,
+      "elapsed_s": 2.602128200000152
+    },
+    {
+      "trial": 9,
+      "params": {
+        "rate": 0.017649957419147384,
+        "hidden": 39
+      },
+      "cv_macro_f1": 0.8594050637968372,
+      "cv_top1": 0.6886248756185146,
+      "elapsed_s": 2.4585385000000315
+    }
+  ]
+}
