@@ -1,0 +1,5 @@
+{
+ "FEATURE_COLS": ["distance_m", "projection_fraction", "direction_cosine", "speed_m_s", "time_gap_s", "segment_length_m", "distance_rank", "connects_previous_best"],
+ "candidate_radius_m": 25,
+ "max_candidates": 30
+}
